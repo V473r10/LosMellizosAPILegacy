@@ -8,14 +8,13 @@ namespace LosMellizos.Controllers
     public class ProductsController : Controller
     {
         [HttpGet]
-        [Route("GetProducts")]
         public IActionResult GetProducts()
         {
             return Ok(Products.Read());
         }
 
         [HttpGet]
-        [Route("GetProduct")]
+        [Route("GetById")]
         public IActionResult GetProduct(int Id)
         {
             return Ok(Products.Read(Id));
